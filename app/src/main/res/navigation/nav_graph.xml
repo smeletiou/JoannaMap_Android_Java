@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.smelet01.joannamap.WelcomeFragment"
+        android:label="@string/welcome_message"
+        tools:layout="@layout/fragment_welcome">
+
+        <action
+            android:id="@+id/action_WelcomeFragment_to_MapFragment"
+            app:destination="@id/mapFragment" />
+
+        <action
+            android:id="@+id/action_WelcomeFragment_to_CameraFragment"
+            app:destination="@id/cameraFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.smelet01.joannamap.CameraFragment"
+        android:label="@string/camera_message"
+        tools:layout="@layout/fragment_camera">
+
+        <action
+            android:id="@+id/action_CameraFragment_to_MapFragment"
+            app:destination="@id/mapFragment" />
+        <action
+            android:id="@+id/action_CameraFragment_to_WelcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.smelet01.joannamap.MapFragment"
+        android:label="@string/map_message"
+        tools:layout="@layout/fragment_map">
+
+        <action
+            android:id="@+id/action_MapFragment_to_CameraFragment"
+            app:destination="@id/cameraFragment" />
+        <action
+            android:id="@+id/action_MapFragment_to_WelcomeFragment"
+            app:destination="@id/welcomeFragment" />
+        <action
+            android:id="@+id/action_MapFragment_to_PhotoFragment"
+            app:destination="@id/photoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/photoFragment"
+        android:name="com.smelet01.joannamap.DetailedPhotoFragment"
+        android:label="@string/photo_message"
+        tools:layout="@layout/fragment_detailed_photo" >
+        <action
+            android:id="@+id/action_PhotoFragment_to_MapFragment"
+            app:destination="@id/mapFragment" />
+
+    </fragment>
+</navigation>

@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    tools:context=".WelcomeFragment">
+
+    <!-- App Name and Welcome Message -->
+    <TextView
+        android:id="@+id/appNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Joanna Map"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingBottom="16dp"/>
+
+    <!-- Capture Photo Button -->
+    <TextView
+        android:id="@+id/welcomeMessageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="24dp"
+        android:text="Welcome to Joanna Map!"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/capturePhotoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Capture Photo"/>
+
+    <!-- Navigate to Map Button -->
+    <Button
+        android:id="@+id/navigateToMapButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to Map"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>

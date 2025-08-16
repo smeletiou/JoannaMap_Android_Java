@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailedPhotoFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/photo_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:contentDescription="Photo Clicked" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Date: "
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/photos_date_taken_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Photo's Date"
+                        android:textColor="#ff555555"
+                        android:textSize="18sp"
+                        android:layout_weight="2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Address: "
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/address_TV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Photo's Address"
+                        android:textColor="#ff555555"
+                        android:textSize="18sp"
+                        android:layout_weight="2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Latitude: "
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/photos_latitude_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Photo's Latitude"
+                        android:textColor="#ff555555"
+                        android:textSize="18sp"
+                        android:layout_weight="2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Longitude: "
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/photos_longitude_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Photo's Longitude"
+                        android:textColor="#ff555555"
+                        android:textSize="18sp"
+                        android:layout_weight="2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="73dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Orientation: "
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/photos_orientation_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Photo's Orientation"
+                        android:textColor="#ff555555"
+                        android:textSize="18sp"
+                        android:layout_weight="2" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/delete_photo_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ff0000"
+            android:padding="16dp"
+            android:text="Delete Photo"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:clickable="true" />
+    </LinearLayout>
+</FrameLayout>
